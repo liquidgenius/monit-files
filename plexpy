@@ -1,0 +1,4 @@
+check process plexpy matching "plexpy"
+    start program = "/usr/sbin/service plexpy start"
+    stop program = "/usr/sbin/service plexpy stop"
+    if failed host 127.0.0.1 port 8181 then restart

@@ -1,0 +1,4 @@
+check process plexmediaserver with pidfile "/var/lib/plexmediaserver/Library/Application\ Support/Plex\ Media\ Server/plexmediaserver.pid"
+    start program = "/usr/sbin/service plexmediaserver start" with timeout 60 seconds
+    stop program  = "/usr/sbin/service plexmediaserver stop"
+    if failed url http://127.0.0.1:32400/web/index.html with timeout 30 seconds for 5 cycles then restart

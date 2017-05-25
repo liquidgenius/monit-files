@@ -1,0 +1,4 @@
+check process apache2 with pidfile "/var/run/apache2/apache2.pid"
+    start program = "/usr/sbin/service apache2 start" with timeout 60 seconds
+    stop program  = "/usr/sbin/service apache2 stop"
+    if failed url http://127.0.0.1/index.html with timeout 30 seconds for 5 cycles then restart
