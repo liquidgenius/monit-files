@@ -1,0 +1,3 @@
+check program checkdir with path "/usr/local/bin/checkdir.pl -dir /mnt/cifs/colossus/Series/"
+	start program = "/bin/mount -a"
+	if status != 0 then start

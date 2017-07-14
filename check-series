@@ -1,0 +1,3 @@
+check program checknfs with path "/usr/local/bin/checknfs.pl -search series"
+	start program = "/bin/mount -a"
+	if status != 0 then start
